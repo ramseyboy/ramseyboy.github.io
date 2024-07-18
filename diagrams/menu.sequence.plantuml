@@ -1,0 +1,18 @@
+@startuml
+actor User as user
+participant App as app
+queue Mediator as q
+participant "Tenant Consumer" as tenant
+participant "Default Consumer*" as default
+
+user -> app : Visit Any Page
+app --> q: Publish MenuRequest Message
+q --> tenant: Message Consumed
+tenant --> q: Message Response
+q --> default: Message Consumed
+default --> q: Message Response
+q --> app: MenuResponse Message
+app -> user: Render MenuComponent with IList<MenuItem>
+user -> app: Select Menu Item
+app -> user: Route to /{QueryType}
+@enduml

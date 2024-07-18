@@ -1,0 +1,29 @@
+@startuml
+actor User as user
+participant App as app
+queue Mediator as q
+participant "Tenant Consumer" as tenant
+participant "Tenant Component" as tenantcomponent
+participant "Default Consumer" as default
+participant "Default Component" as defaultcomponent
+
+user -> app : Visit Page /{QueryType}
+app --> q: Publish QueryComponentRequest Message
+q --> tenant: Message Consumed
+tenant -> tenantcomponent: Construct Component
+tenantcomponent -> tenant: ComponentResponse
+tenant --> q: Message Response
+q --> default: Message Consumed
+destroy q
+note left: Default if not Consumed by Tenant
+default -> defaultcomponent: Construct Component
+defaultcomponent -> default: ComponentResponse
+default --> q: Message Response
+destroy q
+q --> app: ComponentResponse Message
+app -> user: Render DynamicComponent
+user -> app: Input Form
+app -> tenantcomponent: Bind Form to QueryModel
+tenantcomponent -> app: Send QueryModel as IDict<string, string>
+app -> user: Route to /results?IDict<string, string>
+@enduml
