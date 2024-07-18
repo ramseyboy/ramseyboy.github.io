@@ -1,14 +1,24 @@
 {
   "list": [
     {
-      "name":"Hugo",
-      "url":"https://gohugo.io/",
-      "desc":"The world’s fastest framework for building websites."
+      "name":"DirtbagDB",
+      "url":"https://github.com/ramseyboy/DirtbagDB",
+      "desc":"Field data collection for crowdsourced scientific field data collection."
     },
     {
-      "name":"Hugo Themes",
-      "url":"https://github.com/gohugoio/hugoThemes",
-      "desc":"A curated directory of Hugo themes"
+      "name":"Water Data SDK for .NET",
+      "url":"https://github.com/ramseyboy/water-data-dotnet-sdk",
+      "desc":"SDK for pulling data from the USGS NWIS (National Water Information System) and the WQP (Water Quality Data Portal) datasets for use in dotnet applications."
+    },
+    {
+      "name":"NWIS ArcGIS Pro Plugin",
+      "url":"https://github.com/ramseyboy/nwis-arcgispro-plugin",
+      "desc":"USGS NWIS (National Water Information System) plugin for ArcGIS Pro"
+    },
+    {
+      "name":"Shoal Creek Water Quality Bio Mitigation Project",
+      "url":"https://github.com/ramseyboy/shoal-creek-wq-bio-mitigation",
+      "desc":"Project data and exploratory analysis for analysis of swale stormwater controls on the Shoal Creek Watershed in Austin, TX."
     }
   ]
 }
