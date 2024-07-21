@@ -1,6 +1,6 @@
-baseURL = 'https://ramseyboy.github.io/'
+baseURL = 'https://ternarybreakfast.com/'
 languageCode = 'en-us'
-title = 'Walker Hannan Personal Site'
+title = 'Walker Hannan Personal Blog'
 theme = "cactus"
 copyright = "You"
 
